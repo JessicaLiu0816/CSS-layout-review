@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#content
+		{
+			background: pink;
+
+		}
+		.side1
+		{
+			width: 100px;
+			height: 100px;
+			background: red;
+			float: left;
+		}
+		.side2
+		{
+			width: 200px;
+			height: 100px;
+			background: yellow;
+			float: right;
+		}
+		.main
+		{
+			margin-left: 100px;
+			margin-right: 200px;
+		}
+		
+		/*清除浮动*/
+		.clearfix:after
+		{
+			content: ".";
+			display: block;
+			height: 0;
+			line-height: 0;
+			visibility:hidden;
+			clear:both;
+		}
+		.clearfix{zoom:1;}
+
+	</style>
+</head>
+<body>
+	<div id='content' class="clearfix">
+		<div class="side1">side1</div>
+		<div class="side2">side2</div>
+		<div class="main">main</div>
+	</div>
+</body>
+</html>

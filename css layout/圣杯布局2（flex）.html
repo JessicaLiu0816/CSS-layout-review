@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.HolyGrail{display: flex; background: pink; min-height: 100vh; flex-direction: column}
+		header,footer{flex:1;background: #ccc}
+		.Body{display: flex; flex:3;}
+		.content{flex:1;}
+		.nav,.ads{flex-basis: 12em; background: red;}
+		.nav{order:-1;}
+
+		@media (max-width: 768px) {
+		  .HolyGrail-body {
+		    flex-direction: column;
+		    flex: 1;
+		  }
+		  .HolyGrail-nav,
+		  .HolyGrail-ads,
+		  .HolyGrail-content {
+		    flex: auto;
+		  }
+		}
+	</style>
+</head>
+<body class="HolyGrail">
+	<header> 头部</header>
+	<div class="Body">
+		<main class="content">Content</main>
+		<nav class="nav"> nav </nav>
+		<aside class="ads">ads</aside>
+	</div>
+	<footer>底部</footer>
+</body>
+</html>

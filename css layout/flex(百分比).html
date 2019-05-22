@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。 -->
+	<style type="text/css">
+		.Grid{display: flex; background: pink;}
+		.Grid-cell{height: 200px;}
+		.Grid-cell.left{width: 50%; height: 200px; background: red;}
+		.Grid-cell.center{height: 200px; background: green; flex-grow:1}
+		.Grid-cell.right{height: 200px; background: yellow; flex-grow:1}		
+	</style>
+</head>
+<body>
+	<div class="Grid">
+	  <div class="Grid-cell left">...</div>
+	  <div class="Grid-cell center" >...</div>
+	  <div class="Grid-cell right">...</div>
+	</div>
+</body>
+</html>

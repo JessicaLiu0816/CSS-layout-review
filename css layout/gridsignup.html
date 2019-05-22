@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device.width, initial-scala=1">
+    <title>Sign Up</title>
+</head>
+<style>
+.box{
+    border: 1px solid lightgray;
+    position:absolute;
+    width:60%;
+    margin-left:20%;
+    margin-top:3%;
+}
+.container{
+    display:grid;
+    grid-template-areas: 'fname lname'
+                         'number number'  
+                         'email email'
+                         'password vpassword'
+                         'submit signin';
+    position:relative;
+    grid-gap:1em;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:10%;
+}
+h1{
+    text-align:center;
+}
+input[name="fname"]{
+    grid-area:fname;
+    min-width:10px;
+}
+input[name="lname"]{
+    grid-area:lname;
+    min-width:10px;
+}
+input[name="number"]{
+    grid-area:number;
+}
+input[name="password"]{
+    grid-area:password;
+}
+input[name="vpassword"]{
+    grid-area:vpassword;
+}
+input[name="email"]{
+    grid-area:email;
+}
+input[name="submit"]{
+    grid-area:submit;
+    color:white;
+    background-color:lightblue;
+}
+button{
+    grid-area:signin;
+    color:white;
+    background-color:lightgreen;
+}
+@media screen and (max-width:650px) {
+
+    .container{
+    display:grid;
+    grid-template-areas: 'fname'
+                         'lname'
+                         'number'  
+                         'email'
+                         'password'
+                         'vpassword'
+                         'submit'
+                         'signin';
+    position:relative;
+    grid-gap:1em;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:10%;
+}
+   input,button{
+    width: 95%;
+   }
+    
+}
+</style>
+<body> 
+<div class="box">
+     <form action="" method="POST">
+        <h1>Sign Up</h1>
+        <div class="container">
+        <input type="text" name="fname" placeholder="First Name" required>
+        <input type="text" name="lname" placeholder="Last Name" required>
+        <input type="number" name="number" placeholder="Mobile.No" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="vpassword" placeholder="Confirm Password" required>
+        <input type="submit" name="submit" placeholder="Registation">
+        <button name="signin">Sign In</button>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

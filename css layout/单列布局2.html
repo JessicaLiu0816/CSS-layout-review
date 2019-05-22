@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.layout
+			{max-width: 960px; margin: 0 auto;}
+		#header,#footer{width: 100%; background:pink;}
+		#header .layout, #footer .layout{background: blue;}
+		#content{background:yellow; height:50%;}
+	</style>
+</head>
+<body>
+	<div id='header'>
+		<div class="layout">header</div>
+	</div>
+	<div id='content' class="layout">content</div>
+	<div id="footer">
+		<div class="layout">footer</div>
+	</div>
+</body>
+</html>
